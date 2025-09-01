@@ -12,17 +12,26 @@ dotenv.config();
 
 const app = express();
 const server = http.createServer(app);
-app.use(cors({
-  origin: "http://localhost:5173", // your frontend origin
-  credentials: true,
-}));
+const allowedOrigins = [
+  "http://localhost:5173",             // local dev
+  "https://chat-app-using-socket-io-hqr8.onrender.com" // deployed frontend
+];
+
+app.use(
+  cors({
+    origin: allowedOrigins,
+    credentials: true,
+  })
+);
+
 const io = socketio(server, {
   cors: {
-    origin: ["http://localhost:5173"],
+    origin: allowedOrigins,
     methods: ["GET", "POST"],
     credentials: true,
   },
 });
+
 //middlewares
 
 app.use(express.json());
