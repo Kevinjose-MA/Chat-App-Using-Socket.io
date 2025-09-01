@@ -14,7 +14,7 @@ const app = express();
 const server = http.createServer(app);
 const allowedOrigins = [
   "http://localhost:5173",             // local dev
-  "https://chat-app-using-socket-io-hqr8.onrender.com" // deployed frontend
+  "https://chat-app-using-socket-io-1-vgm3.onrender.com" // deployed frontend
 ];
 
 app.use(
