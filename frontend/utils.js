@@ -1,3 +1,3 @@
 // utils.js
-const apiURL ="https://chat-app-using-socket-io-hqr8.onrender.com" // local backend
+const apiURL = import.meta.env.VITE_API_URL || "http://localhost:5000";
 export default apiURL;
