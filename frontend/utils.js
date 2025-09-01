@@ -1,3 +1,3 @@
 // utils.js
-const apiURL = "http://localhost:5000"; // local backend
+const apiURL ="https://chat-app-using-socket-io-hqr8.onrender.com" // local backend
 export default apiURL;
