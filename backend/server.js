@@ -48,8 +48,8 @@ app.get("/", (req, res) => {
   res.json({
     project: "MERN Chat App using Socket.IO",
     message: "Welcome to MERN Chat Application",
-    developedBy: "MasynTech",
-    website: "www.masynctech.com",
+    developedBy: "Kevin",
+    website: "https://github.com/Kevinjose-MA",
   });
 });
 app.use("/api/users", userRouter);
